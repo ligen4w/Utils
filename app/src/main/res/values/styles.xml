@@ -8,4 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- dialog style -->
+    <style name="dialog_base" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowFrame">@null</item>
+
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!-- 是否显示title -->
+        <item name="android:windowNoTitle">false</item>
+
+        <!-- 设置dialog的背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- Dialog动画 -->
+    <style name="dialog_animation" parent="android:Theme.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/dialog_bottom_top</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_top_bottom</item>
+    </style>
 </resources>
