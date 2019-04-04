@@ -124,73 +124,73 @@
     
  #### PermissionUtil—运行时权限工具类
  
-    * Activity中使用
+* Activity中使用
  
-    /**
-     * Activity中调用
-     * 检查和申请多个权限
-     * @param activity
-     * @param permissions
-     * @param requestCode
-     * @return
-     */
-    public static boolean checkPermissions(@NonNull Activity activity, @NonNull String[] permissions, int requestCode)
-    
-    /**
-     * Activity中调用
-     * 检查和申请单个权限
-     * @param activity
-     * @param permission
-     * @param requestCode
-     * @return
-     */
-    public static boolean checkPermission(@NonNull Activity activity, @NonNull String permission, int requestCode)
-    
-    /**
-     * Activity中调用
-     * 用户拒绝相关权限，弹框提示去设置
-     * @param activity
-     * @param permission
-     */
-    public static void deniedPermission(Activity activity, String permission)
+        /**
+         * Activity中调用
+         * 检查和申请多个权限
+         * @param activity
+         * @param permissions
+         * @param requestCode
+         * @return
+         */
+        public static boolean checkPermissions(@NonNull Activity activity, @NonNull String[] permissions, int requestCode)
+
+        /**
+         * Activity中调用
+         * 检查和申请单个权限
+         * @param activity
+         * @param permission
+         * @param requestCode
+         * @return
+         */
+        public static boolean checkPermission(@NonNull Activity activity, @NonNull String permission, int requestCode)
+
+        /**
+         * Activity中调用
+         * 用户拒绝相关权限，弹框提示去设置
+         * @param activity
+         * @param permission
+         */
+        public static void deniedPermission(Activity activity, String permission)
     
  * Fragment中使用
  
-    /**
-     * Fragment中调用
-     * 检查和申请多个权限
-     * @param fragment
-     * @param permissions
-     * @param requestCode
-     * @return
-     */
-    public static boolean checkPermissions(@NonNull Fragment fragment, @NonNull String[] permissions, int requestCode)
+        /**
+         * Fragment中调用
+         * 检查和申请多个权限
+         * @param fragment
+         * @param permissions
+         * @param requestCode
+         * @return
+         */
+        public static boolean checkPermissions(@NonNull Fragment fragment, @NonNull String[] permissions, int requestCode)
     
-    /**
-     * Fragment中调用
-     * 检查和申请单个权限
-     * @param fragment
-     * @param permission
-     * @param requestCode
-     * @return
-     */
-    public static boolean checkPermission(@NonNull Fragment fragment, @NonNull String permission, int requestCode)
-    
-    /**
-     * Fragment中调用
-     * 用户拒绝相关权限，弹框提示去设置
-     * @param fragment
-     * @param permission
-     */
-    public static void deniedPermission(Fragment fragment, String permission)
+        /**
+         * Fragment中调用
+         * 检查和申请单个权限
+         * @param fragment
+         * @param permission
+         * @param requestCode
+         * @return
+         */
+        public static boolean checkPermission(@NonNull Fragment fragment, @NonNull String permission, int requestCode)
+
+        /**
+         * Fragment中调用
+         * 用户拒绝相关权限，弹框提示去设置
+         * @param fragment
+         * @param permission
+         */
+        public static void deniedPermission(Fragment fragment, String permission)
     
  * 检查高级权限
  
-    1.修改系统设置
-    
-    /**
-     * 检查修改系统设置权限，如果未打开则跳转设置页面
-     * @param context
-     * @return
-     */
-    public static boolean checkWriteSettings(Context context)
+        1.修改系统设置
+
+        /**
+         * 检查修改系统设置权限，如果未打开则跳转设置页面
+         * @param context
+         * @return
+         */
+        public static boolean checkWriteSettings(Context context)
