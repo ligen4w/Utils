@@ -124,7 +124,7 @@
     
  #### PermissionUtil—运行时权限工具类
  
- * Activity中使用
+    * Activity中使用
  
     /**
      * Activity中调用
