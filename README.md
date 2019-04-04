@@ -4,24 +4,16 @@
 
 
     allprojects {
-    
         repositories {
-        
             ...
-            
-            maven { url "https://jitpack.io" }
-            
+            maven { url "https://jitpack.io" } 
         }
-     
     }
 在module目录的build.gradle中添加：
 
     dependencies {
-    
-        implementation 'com.github.ligen4w:Utils:v1.0.9'
-        
-    }
-    
+        implementation 'com.github.ligen4w:Utils:v1.0.9' 
+    } 
 #### SensorHelper—重力感应帮助类
     public class SensorActivity extends AppCompatActivity {
 
