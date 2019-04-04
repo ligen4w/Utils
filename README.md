@@ -2,7 +2,6 @@
 ### 使用
 在项目根目录的build.gradle中添加：
 
-
     allprojects {
         repositories {
             ...
@@ -15,6 +14,7 @@
         implementation 'com.github.ligen4w:Utils:v1.0.9' 
     } 
 #### SensorHelper—重力感应帮助类
+
     public class SensorActivity extends AppCompatActivity {
         private SensorHelper sensorHelper;
         @Override
@@ -65,6 +65,7 @@
     }
 
 #### CameraUtil—拍照工具类
+
     /**
      * 拍照
      * @param photoName 设置拍照后的图片名称，可根据名称找到相应图片文件，处理文件上传等
@@ -122,7 +123,9 @@
     public void onDestroy()
     
  #### PermissionUtil—运行时权限工具类
+ 
  * Activity中使用
+ 
     /**
      * Activity中调用
      * 检查和申请多个权限
@@ -152,6 +155,7 @@
     public static void deniedPermission(Activity activity, String permission)
     
  * Fragment中使用
+ 
     /**
      * Fragment中调用
      * 检查和申请多个权限
@@ -181,7 +185,9 @@
     public static void deniedPermission(Fragment fragment, String permission)
     
  * 检查高级权限
+ 
     1.修改系统设置
+    
     /**
      * 检查修改系统设置权限，如果未打开则跳转设置页面
      * @param context
