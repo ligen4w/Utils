@@ -1,17 +1,28 @@
-# 工具类合集Utils
-## 使用
+## 工具类合集Utils
+### 使用
 在项目根目录的build.gradle中添加：
+
+
     allprojects {
+    
         repositories {
+        
             ...
+            
             maven { url "https://jitpack.io" }
+            
         }
+     
     }
 在module目录的build.gradle中添加：
+
     dependencies {
+    
         implementation 'com.github.ligen4w:Utils:v1.0.9'
+        
     }
-* SensorHelper—重力感应帮助类
+    
+#### SensorHelper—重力感应帮助类
     public class SensorActivity extends AppCompatActivity {
 
         private SensorHelper sensorHelper;
@@ -62,7 +73,7 @@
         }
     }
 
-* CameraUtil—拍照工具类
+#### CameraUtil—拍照工具类
     /**
      * 拍照
      * @param photoName 设置拍照后的图片名称，可根据名称找到相应图片文件，处理文件上传等
@@ -119,7 +130,7 @@
      */
     public void onDestroy()
     
- * PermissionUtil—运行时权限工具类
+ #### PermissionUtil—运行时权限工具类
     * Activity中使用
     /**
      * Activity中调用
