@@ -14,7 +14,7 @@
         implementation 'com.github.ligen4w:Utils:v1.0.9' 
     } 
 #### SensorHelper—重力感应帮助类
-    ```java
+    ``` java
     public class SensorActivity extends AppCompatActivity {
         private SensorHelper sensorHelper;
         @Override
