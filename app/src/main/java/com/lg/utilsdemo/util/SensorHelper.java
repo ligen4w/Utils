@@ -31,6 +31,10 @@ public class SensorHelper {
     private ContentObserver contentObserver;
     private ContentResolver contentResolver;
 
+    public static SensorHelper newInstance(Activity activity){
+        return new SensorHelper(activity);
+    }
+
     public SensorHelper(Activity activity) {
         contentResolver = activity.getApplicationContext().getContentResolver();
         wr_activity = new WeakReference<>(activity);

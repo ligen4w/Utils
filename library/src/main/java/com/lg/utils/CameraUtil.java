@@ -570,7 +570,8 @@ public class CameraUtil {
     }
 
     /**
-     * 释放资源
+     * 在Activity或Fragment销毁的时候调用
+     * 释放Bitmap资源,调用gc方法
      */
     public void onDestroy(){
         if(compressBitmap !=null && !compressBitmap.isRecycled()){

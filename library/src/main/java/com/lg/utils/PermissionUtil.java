@@ -32,7 +32,7 @@ public class PermissionUtil {
 
     /**
      * Activity中调用
-     * 检查多个权限
+     * 检查和申请多个权限
      * @param activity
      * @param permissions
      * @param requestCode
@@ -62,7 +62,7 @@ public class PermissionUtil {
 
     /**
      * Fragment中调用
-     * 检查多个权限
+     * 检查和申请多个权限
      * @param fragment
      * @param permissions
      * @param requestCode
@@ -92,7 +92,7 @@ public class PermissionUtil {
 
     /**
      * Activity中调用
-     * 检查单个权限
+     * 检查和申请单个权限
      * @param activity
      * @param permission
      * @param requestCode
@@ -113,7 +113,7 @@ public class PermissionUtil {
 
     /**
      * Fragment中调用
-     * 检查单个权限
+     * 检查和申请单个权限
      * @param fragment
      * @param permission
      * @param requestCode
@@ -132,6 +132,11 @@ public class PermissionUtil {
         }
     }
 
+    /**
+     * 检查修改系统设置权限，如果未打开则跳转设置页面
+     * @param context
+     * @return
+     */
     public static boolean checkWriteSettings(Context context){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             boolean canWrite =Settings.System.canWrite(context);
@@ -145,7 +150,7 @@ public class PermissionUtil {
 
     /**
      * Activity中调用
-     * 用户拒绝相关权限
+     * 用户拒绝相关权限，弹框提示去设置
      * @param activity
      * @param permission
      */
@@ -161,7 +166,7 @@ public class PermissionUtil {
 
     /**
      * Fragment中调用
-     * 用户拒绝相关权限
+     * 用户拒绝相关权限，弹框提示去设置
      * @param fragment
      * @param permission
      */

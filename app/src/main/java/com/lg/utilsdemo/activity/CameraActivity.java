@@ -92,7 +92,7 @@ public class CameraActivity extends AppCompatActivity implements CompoundButton.
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                                 PermissionUtil.REQUEST_CODE_WRITE_EXTERNAL_STORAGE);
                         if (granted) {
-                            loadFromLocalAlbum(photoName, needCrop, imageView);
+                            pickFromAlbum(photoName, needCrop, imageView);
                         }
                         break;
                 }
@@ -108,7 +108,7 @@ public class CameraActivity extends AppCompatActivity implements CompoundButton.
         listDialog.dismiss();
     }
 
-    private void loadFromLocalAlbum(String photoName, boolean needCrop, ImageView imageView) {
+    private void pickFromAlbum(String photoName, boolean needCrop, ImageView imageView) {
         cameraUtil.pickFromAlbum(photoName, needCrop, imageView);
         listDialog.dismiss();
     }
@@ -167,7 +167,7 @@ public class CameraActivity extends AppCompatActivity implements CompoundButton.
                 break;
             case PermissionUtil.REQUEST_CODE_WRITE_EXTERNAL_STORAGE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    loadFromLocalAlbum(currentPhotoName, needCrop, imageView);
+                    pickFromAlbum(currentPhotoName, needCrop, imageView);
                 } else {
                     PermissionUtil.deniedPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
                 }

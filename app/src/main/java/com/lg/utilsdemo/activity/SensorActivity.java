@@ -21,7 +21,7 @@ public class SensorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor);
         icIcon = (ImageView) findViewById(R.id.iv_icon);
-        sensorHelper = new SensorHelper(this);
+        sensorHelper = SensorHelper.newInstance(this);
         sensorHelper.setSupportOrientation(false,false,false,false);
         sensorHelper.setOnDegreeChangedListener(new SensorHelper.OnDegreeChangedListener() {
             @Override
