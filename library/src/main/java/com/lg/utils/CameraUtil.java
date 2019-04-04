@@ -160,7 +160,7 @@ public class CameraUtil {
 
     /**
      * 剪裁图片,裁剪后的图片将替换原图片，设置裁剪后的图片宽高比例和大小
-     * 注：aspectX、aspectY控制裁剪区域，outputX、outputY控制图片输出大小
+     * 注：aspectX、aspectY控制裁剪宽高比例，outputX、outputY控制图片输出大小
      * @param srcImgUri 原图片文件Uri
      * @param cropImgUri 裁剪后的图片文件Uri
      * @param aspectX X方向的比例
@@ -409,7 +409,7 @@ public class CameraUtil {
 
     /**
      * 设置裁剪图片宽高比例和大小,需要在打开相机或相册之前调用
-     * 注：aspectX、aspectY控制裁剪区域，outputX、outputY控制图片输出大小
+     * 注：aspectX、aspectY控制裁剪宽高比例，outputX、outputY控制图片输出大小
      * @param aspectX
      * @param aspectY
      * @param outputX
