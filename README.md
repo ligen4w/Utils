@@ -9,12 +9,12 @@
         }
     }
 在module目录的build.gradle中添加：
-
+    
     dependencies {
         implementation 'com.github.ligen4w:Utils:v1.0.9' 
     } 
 #### SensorHelper—重力感应帮助类
-    ``` java
+
     public class SensorActivity extends AppCompatActivity {
         private SensorHelper sensorHelper;
         @Override
@@ -63,9 +63,9 @@
     //        sensorHelper.stopObserver();
         }
     }
-    ```
+
 #### CameraUtil—拍照工具类
-    ```java
+
     /**
      * 拍照
      * @param photoName 设置拍照后的图片名称，可根据名称找到相应图片文件，处理文件上传等
@@ -73,8 +73,7 @@
      * @param imageView 加载图片的ImageView
      */
     public void takePhoto(@NonNull String photoName, boolean needCrop, @NonNull ImageView imageView)
-    ```
-    ```java
+
     /**
      * 从相册中选择图片
      * @param photoName 设置选中图片的名称，可根据名称找到相应图片文件，处理文件上传等
@@ -82,15 +81,13 @@
      * @param imageView 显示图片的控件
      */
     public void pickFromAlbum(@NonNull String photoName, boolean needCrop, @NonNull ImageView imageView)
-    ```
-    ```java
+
     /**
      * 设置压缩阈值,需要在打开相机或相册之前调用
      * @param limitSize
      */
     public void setCompressLimit(int limitSize)
-    ```
-    ```java
+
     /**
      * 设置裁剪图片宽高比例和大小,需要在打开相机或相册之前调用
      * 注：aspectX、aspectY控制裁剪宽高比例，outputX、outputY控制图片输出大小
@@ -100,39 +97,35 @@
      * @param outputY
      */
     public void setCropData(int aspectX, int aspectY, int outputX, int outputY)
-    ```
-    ```java
+
     /**
      * 图片是否加载成功
      * @return
      */
     public boolean isLoadPhoto()
-    ```
-    ```java
+
     /**
      * 重置图片加载状态
      */
     public void resetIsLoadPhoto()
-    ```
-    ```java
+
     /**
      * 图片加载成功监听
      */
     public interface OnImageLoadSuccessListener{
         void onSuccess();
     }
-    ```
-    ```java
+
     /**
      * 在Activity或Fragment销毁的时候调用
      * 释放Bitmap资源,调用gc方法
      */
     public void onDestroy()
-    ```
+
  #### PermissionUtil—运行时权限工具类
  
 * Activity中使用
-        ```java
+ 
         /**
          * Activity中调用
          * 检查和申请多个权限
@@ -142,7 +135,6 @@
          * @return
          */
         public static boolean checkPermissions(@NonNull Activity activity, @NonNull String[] permissions, int requestCode)
-        ```
 
         /**
          * Activity中调用
