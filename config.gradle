@@ -1,0 +1,30 @@
+ext {
+
+    android = [
+            compileSdkVersion: 27,
+            minSdkVersion    : 16,
+            targetSdkVersion : 27,
+            versionCode      : 109,
+            versionName      : "1.0.9"
+    ]
+
+    dependVersion = [
+            support: "27.0.0"
+    ]
+
+    dependencies = [
+            // support
+            supportV4    : "com.android.support:support-v4:${dependVersion.support}",
+            appcompatV7  : "com.android.support:appcompat-v7:${dependVersion.support}",
+            recyclerview : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            design       : "com.android.support:design:${dependVersion.support}",
+            // 测试
+            junit        : "junit:junit:4.12",
+            espresso     : "com.android.support.test.espresso:espresso-core:2.2.2",
+            // 第三方
+            BaseRecyclerViewAdapterHelper:"com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
+            butterknife  : "com.jakewharton:butterknife:8.8.1",
+            butterknife_compiler : "com.jakewharton:butterknife-compiler:8.8.1",
+    ]
+
+}
