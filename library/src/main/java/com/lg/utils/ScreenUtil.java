@@ -1,12 +1,15 @@
 package com.lg.utils;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.res.Resources;
 import android.graphics.Point;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.View;
 import android.view.WindowManager;
 
 /**
@@ -103,5 +106,30 @@ public class ScreenUtil {
         size[0] = widthPixels;
         size[1] = heightPixels;
         return size;
+    }
+
+    /**
+     * 获取content区域的大小
+     * @param context
+     * @return
+     */
+    public static int[] getContentViewSize(Context context) {
+        int[] contentViewSize = new int[2];
+        View contentView = scanForActivity(context).findViewById(android.R.id.content);
+        contentViewSize[0] = contentView.getWidth();
+        contentViewSize[1] = contentView.getHeight();
+        return contentViewSize;
+    }
+
+    public static Activity scanForActivity(Context context) {
+        if (context == null) return null;
+
+        if (context instanceof Activity) {
+            return (Activity) context;
+        } else if (context instanceof ContextWrapper) {
+            return scanForActivity(((ContextWrapper) context).getBaseContext());
+        }
+
+        return null;
     }
 }
